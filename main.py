@@ -35,7 +35,7 @@ class Auto:
         self.precio= precio
         self.asientos= asiento
         self.marca= marca
-        self.motor= Motor(motor)
+        self.motor= motor
         self.registro= registro
 
     def cantidadAsientos(self):
@@ -48,7 +48,7 @@ class Auto:
             if Asiento(asiento).registro != registro_auto:
                 return ("Las piezas no son originales")
             
-        if self.motor.registro != registro_auto:
+        if Motor(self.motor).registro != registro_auto:
             return ("Las piezas no son originales")
         return ("Auto original")
             
