@@ -22,9 +22,9 @@ class Motor:
     
     def asignarTipo(self,nTipo):
         if nTipo == "gasolina":
-            self.tipo=nTipo
+            self.tipo = nTipo
         elif nTipo == "electrico":
-            self.tipo == nTipo
+            self.tipo = nTipo
         else:
             pass
         
@@ -33,9 +33,9 @@ class Auto:
     def __init__(self,modelo,precio,asiento,marca,motor,registro):
         self.modelo= modelo
         self.precio= precio
-        self.asientos=asiento
+        self.asientos= [Asiento(asiento)]
         self.marca= marca
-        self.motor= motor
+        self.motor= Motor(motor)
         self.registro= registro
 
     def cantidadAsientos(self):
